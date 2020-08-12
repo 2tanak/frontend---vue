@@ -1,15 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Articles from '../views/Articles.vue'
+import Update from '../views/Update.vue'
+import Create from '../views/Create.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'articles',
+    component: Articles
   },
+  {
+    path: '/articles',
+    name: 'articles',
+    component: Articles
+  },
+  {
+    path: '/update/:id',
+    name: 'update',
+    component: Update
+  },
+  {
+    path: '/create',
+    name: 'create',
+    component: Create
+  },
+  
   {
     path: '/about',
     name: 'About',
